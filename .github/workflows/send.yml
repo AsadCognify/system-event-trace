@@ -44,4 +44,4 @@ jobs:
         run: |
           curl -X POST https://starfish-eminent-correctly.ngrok-free.app/data \
           -H "Content-Type: application/json" \
-          -d '{"user": "${{ github.actor }}", "environment": "${{ github.environment }}", "branch": "${{ github.ref_name }}"}'
+          -d '{"user": "${{ github.actor }}", "environment": "${{ job.environment.name }}", "branch": "${{ github.ref_name }}"}'
